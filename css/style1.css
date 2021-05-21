@@ -1,49 +1,56 @@
 * {
-      margin: 0;
-      padding: 0;
-      font-family: 'S-CoreDream-3Light';
-    }
+  margin: 0;
+  padding: 0;
+  font-family: 'S-CoreDream-3Light';
+}
 
-    @font-face {
-      font-family: 'S-CoreDream-3Light';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-    }
+html { scroll-behavior: smooth; }
 
-    body {
-      background-color: rgb(26, 26, 26);
-    }
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
-    .text-wrap {
-      text-align: center;
-      margin: 0 auto;
-    }
+body {
+  background-color: rgb(18, 26, 36);
+}
 
-    #input-name {
-      border-bottom: #fff 15px;
-    }
+.page-box {
+  height: 1280px;
+  
+}
 
-    #HBD-text {
-      font-size: 1.7em;
-      margin-top: 410px;
-      color: #fff;
-      position: relative;
-      display: inline-block;
-    }
+.text-wrap {
+  text-align: center;
+  margin: 0 auto;
+}
 
-    /* after : 가상 요소 적용 */
-    #HBD-text::after { 
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      right: -10px;
-      width: 3px;
-      height: 100%;
-      background-color: #fff;
-    }
+#input-name {
+  border-bottom: #fff 15px;
+}
 
-    #HBD-text.remove::after {
-      display: none;
-    }
+#HBD-text {
+  font-size: 1.7em;
+  margin-top: 410px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+
+/* after : 가상 요소 적용 */
+#HBD-text::after { 
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 3px;
+  height: 100%;
+  background-color: #fff;
+}
+
+#HBD-text.remove::after {
+  display: none;
+}
