@@ -6,13 +6,6 @@
 
 html { scroll-behavior: smooth; }
 
-@font-face {
-  font-family: 'S-CoreDream-3Light';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 body {
   background-color: rgb(18, 26, 36);
 }
@@ -25,6 +18,12 @@ body {
 .text-wrap {
   text-align: center;
   margin: 0 auto;
+}
+
+.sm-text {
+  display: block;
+  margin-top: 20px;
+  color: rgb(61, 79, 100);
 }
 
 #input-name {
