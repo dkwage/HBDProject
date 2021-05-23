@@ -15,24 +15,9 @@ body {
   
 }
 
-.text-wrap {
-  text-align: center;
-  margin: 0 auto;
-}
-
-.sm-text {
-  display: block;
-  margin-top: 20px;
-  color: rgb(61, 79, 100);
-}
-
-#input-name {
-  border-bottom: #fff 15px;
-}
-
 #HBD-text {
   font-size: 1.7em;
-  margin-top: 410px;
+  margin-top: 400px;
   color: #fff;
   position: relative;
   display: inline-block;
@@ -52,4 +37,39 @@ body {
 
 #HBD-text.remove::after {
   display: none;
+}
+
+.text-wrap {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.next-btn {
+  /* display: none; */
+  width: 120px;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: rgb(45, 61, 80);
+  border: none;
+  background-color: rgb(18, 26, 36);
+  cursor: pointer;
+  transition: all 0.4s;
+  animation: fadeIn 25s;
+}
+
+.next-btn:hover {
+  color: rgb(102, 128, 158);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
