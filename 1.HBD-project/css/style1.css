@@ -6,13 +6,13 @@
 
 html { scroll-behavior: smooth; }
 
-body {
-  background-color: rgb(18, 26, 36);
-}
-
 .page-box {
+  width: 100%;
   height: 1280px;
-  
+  scroll-snap-type: y mandatory;
+}
+.page-box::-webkit-scrollbar {
+  display: none;
 }
 
 #HBD-text {
@@ -46,7 +46,7 @@ body {
   margin: 0 auto;
 }
 
-.next-btn {
+#next-btn {
   /* display: none; */
   width: 120px;
   height: 30px;
@@ -61,7 +61,7 @@ body {
   animation: fadeIn 25s;
 }
 
-.next-btn:hover {
+#next-btn:hover {
   color: rgb(102, 128, 158);
 }
 

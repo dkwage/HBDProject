@@ -46,3 +46,8 @@ function blink() {
   target.classList.toggle("remove");
 }
 setInterval(blink, 600);
+
+function nextPage() {
+  let nextButton = document.getElementById('next-btn');
+  window.scrollTo(0, 1281);
+}
