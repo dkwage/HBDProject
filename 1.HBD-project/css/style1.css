@@ -1,20 +1,20 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'S-CoreDream-3Light';
+  background-color: rgb(17, 25, 44);
 }
 
-html { scroll-behavior: smooth; }
-
-.page-box {
-  width: 100%;
-  height: 1280px;
-  scroll-snap-type: y mandatory;
-}
-.page-box::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
 }
 
+.text-wrap {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  margin: 0 auto;
+}
+/* main title */
 #HBD-text {
   font-size: 1.7em;
   margin-top: 400px;
@@ -22,7 +22,6 @@ html { scroll-behavior: smooth; }
   position: relative;
   display: inline-block;
 }
-
 /* after : 가상 요소 적용 */
 #HBD-text::after { 
   content: "";
@@ -39,15 +38,7 @@ html { scroll-behavior: smooth; }
   display: none;
 }
 
-.text-wrap {
-  display: flex;
-  flex-flow: column wrap;
-  text-align: center;
-  margin: 0 auto;
-}
-
 #next-btn {
-  /* display: none; */
   width: 120px;
   height: 30px;
   margin: 0 auto;
@@ -55,7 +46,7 @@ html { scroll-behavior: smooth; }
   font-size: 0.9em;
   color: rgb(45, 61, 80);
   border: none;
-  background-color: rgb(18, 26, 36);
+  background-color: rgb(17, 25, 44);
   cursor: pointer;
   transition: all 0.4s;
   animation: fadeIn 25s;
@@ -72,4 +63,14 @@ html { scroll-behavior: smooth; }
   to {
     opacity: 1;
   }
+}
+
+/* cavas area */
+.canvas-wrap {
+  margin: 0 auto;
+}
+
+.cake-body1 {
+  width: 20vmax;
+  height: 18vmax;
 }

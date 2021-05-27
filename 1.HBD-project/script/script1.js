@@ -48,6 +48,22 @@ function blink() {
 setInterval(blink, 600);
 
 function nextPage() {
-  let nextButton = document.getElementById('next-btn');
+  let nextButton = document.getElementById("next-btn");
   window.scrollTo(0, 1281);
 }
+
+// 캔버스요소 가져오기        
+let cake_body1 = document.getElementById("cake-body1");
+let cake_body2 = document.getElementById("cake-body2");
+// 드로잉용 컨텍스트 생성        
+let context_canvas1 = cake_body1.getContext("2d");
+let context_canvas2 = cake_body2.getContext("2d");
+// 드로잉 살
+context_canvas1.fillStyle = "#535E78"; // 면색상
+context_canvas2.fillStyle = "#535E78"; // 면색상
+
+// 드로잉 뼈      
+context_canvas1.rect(20, 20, 120, 20); // 도형       
+context_canvas2.rect(20, 20, 120, 20); // 도형       
+context_canvas1.fill(); // 면색       
+context_canvas2.fill(); // 면색       
