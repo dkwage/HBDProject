@@ -3,26 +3,24 @@
   padding: 0;
   background-color: rgb(17, 25, 44);
 }
-
 body::-webkit-scrollbar {
   display: none;
 }
-
 .text-wrap {
   display: flex;
   flex-flow: column wrap;
   text-align: center;
-  margin: 0 auto;
 }
-/* main title */
+
+/*   main title   */
 #HBD-text {
   font-size: 1.7em;
-  margin-top: 400px;
+  margin-top: 300px;
+  margin-bottom: 50px;
   color: #fff;
   position: relative;
   display: inline-block;
 }
-/* after : 가상 요소 적용 */
 #HBD-text::after { 
   content: "";
   display: block;
@@ -33,15 +31,80 @@ body::-webkit-scrollbar {
   height: 100%;
   background-color: #fff;
 }
-
 #HBD-text.remove::after {
   display: none;
 }
 
+/*    cake-area    */
+.cake-wrap {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.candle {
+
+}
+
+#light-front {
+  width: 7px;
+  height: 10px;
+  border-radius: 5px;
+  animation: candleFront 0.1s infinite alternate;
+}
+@keyframes candleFront {
+  
+}
+
+#light-back {
+  width: 20px;
+  height: 35px;
+  border-radius: 30px;
+  animation: lightBack 0.6s infinite alternate;
+  filter: blur(5px);
+}
+@keyframes lightBack {
+  from {
+    background-color: rgb(255, 255, 191);
+    opacity: 0.2;
+  }
+  to {
+    background-color: rgb(255, 247, 172);
+    opacity: 0.3;
+  }
+}
+/* @keyframes candleDown {
+  to {
+    transform: scale(10);
+    transition: ;
+  }
+} */
+
+#candle-body {
+  margin: 0 auto;
+  width: 5px;
+  height: 25px;
+  background-color: rgb(243, 174, 202);
+}
+.chiffon {
+  width: 17vh;
+  height: 2.4vh;
+  background-color: #fff;
+  border-radius: 3px;
+}
+.chiffon:nth-child(2n-1) {
+  height: 12px;
+  background-color: #f776b2;
+}
+#cake-bottom {
+  width: 200px;
+  height: 6px;
+  background-color: #b4afd4;
+}
+
+/*    클릭 버튼    */
 #next-btn {
   width: 120px;
   height: 30px;
-  margin: 0 auto;
   margin-top: 20px;
   font-size: 0.9em;
   color: rgb(45, 61, 80);
@@ -51,26 +114,11 @@ body::-webkit-scrollbar {
   transition: all 0.4s;
   animation: fadeIn 25s;
 }
-
 #next-btn:hover {
   color: rgb(102, 128, 158);
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
-  to {
-    opacity: 1;
-  }
-}
-
-/* cavas area */
-.canvas-wrap {
-  margin: 0 auto;
-}
-
-.cake-body1 {
-  width: 20vmax;
-  height: 18vmax;
 }
