@@ -42,14 +42,17 @@ body::-webkit-scrollbar {
   align-items: center;
 }
 .candle {
-
+  
 }
 
 #light-front {
-  width: 7px;
-  height: 10px;
+  left: 10px;
+  width: 5px;
+  height: 8px;
   border-radius: 5px;
+  background-color: yellow;
   animation: candleFront 0.1s infinite alternate;
+  filter: blur(1px);
 }
 @keyframes candleFront {
   
