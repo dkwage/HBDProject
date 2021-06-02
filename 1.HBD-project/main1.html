@@ -8,31 +8,35 @@
 </head>
 
 <body>
-    <div class="text-wrap">
-        <p id="HBD-text" class="lg-text"></p>
-    </div>
-
-    <div class="cake-wrap">
-      <div class="candle">
-        <div class="light"></div>
-        <div class="light"></div>
-        <div class="light"></div>
-        <div class="light"></div>
-        <div class="light"></div>
-        <div id="candle-body"></div>
+    <section class="pages">
+      <div class="text-wrap">
+          <p id="HBD-text" class="lg-text"></p>
       </div>
-      <div id="cobertura"></div>
-      <section class="chiffons">
-        <div class="chiffon"></div>
-        <div class="chiffon"></div>
-        <div class="chiffon"></div>
-        <div class="chiffon"></div>
-        <div class="chiffon"></div>
-      </section>
-      <div id="cake-bottom"></div>
 
-      <input onclick="nextPage()" type="button" id="next-btn" value="초를 클릭 하세요.">
-    </div>  
+      <article class="cake-wrap">
+        <section id="candle" onclick="nextPage()">
+          <div class="light"></div>
+          <div class="light"></div>
+          <div class="light"></div>
+          <div class="light"></div>
+          <div class="light"></div>
+          <div id="candle-body"></div>
+        </section>
+
+        
+        <section class="chiffons">
+          <div id="cream"></div>
+          <div class="chiffon"></div>
+          <div class="chiffon"></div>
+          <div class="chiffon"></div>
+          <div class="chiffon"></div>
+          <div class="chiffon"></div>
+        </section>
+        <div id="cake-bottom"></div>
+
+        <input type="button" id="next-btn" value="초를 클릭 하세요.">
+      </article>  
+    </section>
 
 
   <script src="script/script1.js"></script> 
