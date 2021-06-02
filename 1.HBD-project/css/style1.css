@@ -3,36 +3,44 @@
   padding: 0;
   background-color: rgb(17, 25, 44);
 }
+
 body::-webkit-scrollbar {
   display: none;
 }
+
+.pages.remove-page::after {
+  display : none;
+}
+
+
+/* ===================================== title   */
+
 .text-wrap {
   display: flex;
   flex-flow: column wrap;
   text-align: center;
 }
 
-
-/* ===================================== main title   */
-
 #HBD-text {
   font-size: 1.7em;
-  margin-top: 300px;
-  margin-bottom: 50px;
+  margin-top: 30vh;
+  margin-bottom: 120px;
   color: #fff;
   position: relative;
   display: inline-block;
 }
+
 #HBD-text::after { 
   content: "";
   display: block;
   position: absolute;
   top: 0;
-  right: -10px;
+  right: 25%;
   width: 3px;
   height: 100%;
   background-color: #fff;
 }
+
 #HBD-text.remove::after {
   display: none;
 }
@@ -42,31 +50,34 @@ body::-webkit-scrollbar {
 
 .cake-wrap {
   display: flex;
-  margin-top: 50px;
   flex-flow: column nowrap;
   align-items: center;
+  margin-top: 50px;
   position: relative;
 }
 
 
 /* ============================================ candle   */
 
-.candle {
+#candle {
   cursor: pointer;
+  position: absolute;
+  top: -38%; left: 50%;
+  margin-bottom: 16px;
 }
 
 .light {
   border-radius: 100%;
+  position: absolute;
   box-shadow:0 0 40px 15px rgba(255, 249, 199, 0.2);
-  position:absolute;
-  top: -14%; left: 50%;
+  top: -80%; left: 50%;
 }
 
 .light:nth-child(1){
   animation: light 2s infinite;
 }
 
-/* .light:nth-child(2){
+.light:nth-child(2){
   animation: light 1.5s infinite;
 }
 
@@ -80,19 +91,18 @@ body::-webkit-scrollbar {
 
 .light:nth-child(5){
   animation: light 0.2s infinite;
-} */
+}
 
 #candle-body {
   margin: 0 auto;
   width: 8px;
   height: 36px;
   border-radius: 2px;
-  background-color: rgb(209, 56, 115);
+  background-color: rgb(253, 167, 200);
 }
 
 
-/* ============================================== Animation Fire
-*/
+/* ============================================== Animation Fire */
 
 @keyframes light {
   0% {
@@ -112,21 +122,69 @@ body::-webkit-scrollbar {
 
 /* ==================================== chiffons */
 
-.chiffon {
+#cream {
   width: 160px;
-  height: 20px;
-  background-color: #fff;
+  height: 24px;
+  background:#fff;
+  border-radius: 16px 16px 10px 10px;
+  position: absolute;
+  top: -13%;
+  z-index:10;
+}
+
+#cream:after,
+#cream:before {
+  width: 12px;
+  height: 32px;
+  content: "";
+  background:#fff;
+  position:absolute;
+  border-radius: 100px;
+  animation: cream 1s infinite alternate;
+}
+
+#cream::after {
+  top: 50%;
+  left: 20%;
+}
+
+#cream:before {
+  top: 80%;
+  left: 80%;
+}
+
+.chiffon {
+  width: 160px; height: 20px;
+  background-color: rgba(236,231,227,1);
   border-radius: 5px;
 }
-.chiffon:nth-child(2n) {
-  height: 12px;
-  background-color: #f776b2;
+
+.chiffon:nth-child(2) {
+  animation: chiffon 1.5s infinite;
 }
+
+.chiffon:nth-child(3) {
+  animation: chiffon 1s infinite;
+}
+
+.chiffon:nth-child(4) {
+  animation: chiffon 0.5s infinite;
+}
+
+.chiffon:nth-child(5) {
+  animation: chiffon 0.2s infinite;
+}
+
+.chiffon:nth-of-type(2n-1) {
+  height: 10px;
+  border-radius: 3px;
+  background-color: #fa6f9d;
+}
+
 #cake-bottom {
-  width: 220px;
-  height: 5px;
+  width: 220px; height: 5px;
   background-color: #a8cce9;
-  animation: cake-bottom;
+  animation: cake-bottom 1s infinite;
 }
 
 
@@ -138,8 +196,30 @@ body::-webkit-scrollbar {
   }
 }
 
+@keyframes cream {
+  50% {
+    transform: scaleX(6px);
+  }
+  100% {
+    transform: scaleY(12px);
+  }
+}
 
-/*    클릭 버튼    */
+@keyframes chiffon {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20) scale(0);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =============================== click button */
+
 #next-btn {
   width: 120px;
   height: 30px;
@@ -148,13 +228,14 @@ body::-webkit-scrollbar {
   color: rgb(45, 61, 80);
   border: none;
   background-color: rgb(17, 25, 44);
-  cursor: pointer;
   transition: all 0.4s;
   animation: fadeIn 35s;
 }
+
 #next-btn:hover {
   color: rgb(102, 128, 158);
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -163,34 +244,4 @@ body::-webkit-scrollbar {
 
 
 
-   /* cobertura   
-.cobertura {
-  background: #fff;
-}
-.cobertura{
-  background:rgba(236,231,227,1);
-  border-radius:@D/2;
-  position:absolute;
-  top:60%; left:50%;
-  margin-left:-(@D/2)/1.8;
-  margin-top:-(@D/2)/10;
-  width:@D/1.8; height:@D/8;
-  z-index:10;
-}
-
-.cobertura:after,
-.cobertura:before{
-  background:rgba(236,231,227,1);
-  border-radius:@D;
-  content:"";
-  position:absolute;
-  width:@D/20; height:@D/10;
-}
-
-.cobertura:after{
-  top:@D/15; right:@D/7;
-}
-
-.cobertura:before{
-  top:@D/10; right:@D/11;
-} */
+ 
