@@ -61,36 +61,34 @@ body::-webkit-scrollbar {
 
 #candle {
   cursor: pointer;
-  position: absolute;
-  top: -38%; left: 50%;
   margin-bottom: 16px;
 }
 
 .light {
-  border-radius: 100%;
   position: absolute;
+  top: -10%; left: 50%;
+  border-radius: 100%;
   box-shadow:0 0 40px 15px rgba(255, 249, 199, 0.2);
-  top: -80%; left: 50%;
 }
 
 .light:nth-child(1){
-  animation: light 2s infinite;
+  animation: 
 }
 
 .light:nth-child(2){
-  animation: light 1.5s infinite;
+  animation: 
 }
 
 .light:nth-child(3){
-  animation: light 1s infinite;
+  animation: 
 }
 
 .light:nth-child(4){
-  animation: light 0.5s infinite;
+  animation: 
 }
 
 .light:nth-child(5){
-  animation: light 0.2s infinite;
+  animation: 
 }
 
 #candle-body {
@@ -102,22 +100,8 @@ body::-webkit-scrollbar {
 }
 
 
-/* ============================================== Animation Fire */
+/* ============================================== Candle Animation */
 
-@keyframes light {
-  0% {
-    background:rgba(254,248,97,0.5);
-    transform:translateY(0) scale(1);
-  }
-  50% {
-    background:rgba(255,50,0,0.1);
-    transform:translateY(-(5)) scale(0);
-  }
-  100% {
-    background:rgba(254,248,97,0.5);
-    transform:translateY(0) scale(1);
-  }
-}
 
 
 /* ==================================== chiffons */
@@ -128,7 +112,7 @@ body::-webkit-scrollbar {
   background:#fff;
   border-radius: 16px 16px 10px 10px;
   position: absolute;
-  top: -13%;
+  top:18%;
   z-index:10;
 }
 
@@ -157,9 +141,10 @@ body::-webkit-scrollbar {
   width: 160px; height: 20px;
   background-color: rgba(236,231,227,1);
   border-radius: 5px;
+  animation-name: chiffon;
 }
 
-/* .chiffon:nth-child(2) {
+.chiffon:nth-child(2) {
   animation: chiffon 1.5s infinite;
 }
 
@@ -173,7 +158,7 @@ body::-webkit-scrollbar {
 
 .chiffon:nth-child(5) {
   animation: chiffon 0.2s infinite;
-} */
+}
 
 .chiffon:nth-of-type(2n-1) {
   height: 10px;
@@ -183,38 +168,26 @@ body::-webkit-scrollbar {
 
 #cake-bottom {
   width: 220px; height: 5px;
+  position: absolute;
+  top: 72%;
   background-color: #a8cce9;
-  animation-name: cake-bottom;
+  animation-name: cake-bottom 1s forwards
 }
 
 
 /* ============================== cake animation */
 
 @keyframes cake-bottom {
-  to {
-    transform: scale(100px);
-  }
-}
-
-@keyframes cream {
-  50% {
-    transform: scaleX(6px);
+  0% {
+    transform: scale(0px);
   }
   100% {
-    transform: scaleY(12px);
+    transform: scaleX(220px);
   }
 }
 
 @keyframes chiffon {
-  0% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-20) scale(0);
-  }
-  100% {
-    transform: translateY(0) scale(1);
-  }
+  
 }
 
 
