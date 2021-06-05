@@ -16,9 +16,7 @@ body::-webkit-scrollbar {
 /* ===================================== title   */
 
 .text-wrap {
-  display: flex;
-  flex-flow: column wrap;
-  text-align: center;
+  display: inline-block;
 }
 
 #HBD-text {
@@ -27,17 +25,15 @@ body::-webkit-scrollbar {
   margin-bottom: 120px;
   color: #fff;
   position: relative;
-  display: inline-block;
+  
 }
 
 #HBD-text::after { 
+  width: 3px; height: 100%;
   content: "";
   display: block;
   position: absolute;
-  top: 0;
-  right: 25%;
-  width: 3px;
-  height: 100%;
+  top: 0; right: -10px;
   background-color: #fff;
 }
 
@@ -171,7 +167,7 @@ body::-webkit-scrollbar {
   position: absolute;
   top: 72%;
   background-color: #a8cce9;
-  animation-name: cake-bottom 1s forwards
+  animation: cake-bottom 1s;
 }
 
 
@@ -179,10 +175,10 @@ body::-webkit-scrollbar {
 
 @keyframes cake-bottom {
   0% {
-    transform: scale(0px);
+    transform: scaleX(0);
   }
   100% {
-    transform: scaleX(220px);
+    transform: scaleX(1);
   }
 }
 
