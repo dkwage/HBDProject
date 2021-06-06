@@ -1,3 +1,5 @@
+// ==================================================== HBD text
+
 let target = document.getElementById("HBD-text");
 let stringArr = ["배짱님의 생일을 축하합니다.", "이은창님의 생일을 축하합니다.",
  "은창님의 생일을 축하합니다.", "은냥님의 생일을 축하합니다."];
@@ -7,7 +9,6 @@ let selectString = stringArr[Math.floor(Math.random() * stringArr.length)];
 
 // 가지고 온 배열의 문자열을 "" 기준으로 쪼개(split) 다시 배열로 변경
 let selectStringArr = selectString.split(""); 
-
 
 function randomString() {
   let target = document.getElementById("HBD-text");
@@ -19,13 +20,11 @@ function randomString() {
   return selectStringArr;
 }
 
-
 // reset typing
 function restetTyping() {
   target.textContent = "";
   hbdText(randomString());
 }
-
 
 // 한글자씩 텍스트 출력 함수
 //배열화 되어있는 값이 매개변수로 전달됨
@@ -59,4 +58,13 @@ function nextPage() {
   let nextButton = document.getElementById("next-btn");
   
   document.getElementsByClassName("pages").style.display = 'none'
+}
+
+
+// ============================== cake bottom
+
+function cake() {
+  let cakeBottom = document.getElementById('cake-bottom');
+  let cakeChiffons = document.getElementsByClassName('chiffon');
+  let cakeCream = document.getElementById('cream');
 }
