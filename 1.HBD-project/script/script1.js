@@ -12,8 +12,8 @@ let selectStringArr = selectString.split("");
 
 function randomString() {
   let target = document.getElementById("HBD-text");
-  let stringArr = ["배짱님의 생일을 축하합니다.", "이은창님의 생일을 축하합니다.",
-  "은창님의 생일을 축하합니다.", "은냥님의 생일을 축하합니다."];
+  let stringArr = ["배짱E님의 생일을 축하합니다.", "배짱님의 생일을 축하합니다.", 
+  "이은창님의 생일을 축하합니다.", "은창님의 생일을 축하합니다.", "은냥님의 생일을 축하합니다."];
   let selectString = stringArr[Math.floor(Math.random() * stringArr.length)];
   let selectStringArr = selectString.split("");  
 
@@ -54,17 +54,22 @@ function blink() {
 }
 setInterval(blink, 600);
 
-function nextPage() {
-  let nextButton = document.getElementById("next-btn");
-  
-  document.getElementsByClassName("pages").style.display = 'none'
-}
 
-
-// ============================== cake bottom
+// ============================== cake motion
 
 function cake() {
   let cakeBottom = document.getElementById('cake-bottom');
   let cakeChiffons = document.getElementsByClassName('chiffon');
   let cakeCream = document.getElementById('cream');
+
+}
+
+
+
+
+// ============================== next button
+function nextPage() {
+  let nextButton = document.getElementById("next-btn");
+  
+  document.getElementsByClassName("pages").style.display = 'none'
 }

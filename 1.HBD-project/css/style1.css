@@ -65,19 +65,23 @@ body::-webkit-scrollbar {
   position: absolute;
   top: -10%; left: 50%;
   border-radius: 100%;
-  box-shadow:0 0 40px 15px rgba(255, 249, 199, 0.2);
-}
-
-.light:nth-child(1){
-  animation: 
+  box-shadow:0 0 38px 20px rgba(255, 253, 231, 0.2);
+  animation: backLight 0.8s infinite alternate;
+  animation-timing-function: ease-in;
 }
 
 .light:nth-child(2){
-  animation: 
+  position: absolute;
+  left: 50%;
+  box-shadow: 0 0 20px 0px rgb(255, 222, 75);
 }
 
 .light:nth-child(3){
-  animation: 
+  border-top: 30px solid; border-right: 10px soli;
+  position: absolute;
+  top: -20%; left: 49.4%;
+  animation: bigCandle 3s infinite alternate;
+  animation-timing-function: ease-in;
 }
 
 .light:nth-child(4){
@@ -99,6 +103,23 @@ body::-webkit-scrollbar {
 
 /* ============================================== Candle Animation */
 
+@keyframes backLight {
+  0% {
+    box-shadow: 0 0 35px 20px rgba(255, 248, 210, 0.2);
+  }
+}
+
+@keyframes bigCandle {
+  0% {
+    border-top: 30px solid; border-right: 10px solid rgb(255, 243, 190)
+  }
+  50% {
+    border-top: 30px solid; border-right: 10px solid rgb(255, 231, 98)
+  }
+  100% {
+    border-top: 30px solid; border-right: 10px solid rgb(255, 161, 84)
+  }
+}
 
 
 /* ==================================== chiffons */
