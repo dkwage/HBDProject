@@ -77,19 +77,18 @@ body::-webkit-scrollbar {
 }
 
 .light:nth-child(3){
-  border-top: 30px solid; border-right: 10px soli;
-  position: absolute;
-  top: -20%; left: 49.4%;
+  border-top: 30px solid;
+  margin: -15px 0px 0px -5px;
   animation: bigCandle 3s infinite alternate;
   animation-timing-function: ease-in;
 }
 
 .light:nth-child(4){
-  animation: 
+  animation: ;
 }
 
 .light:nth-child(5){
-  animation: 
+  animation: ;
 }
 
 #candle-body {
@@ -195,6 +194,10 @@ body::-webkit-scrollbar {
   top: 72%;
   background-color: #a8cce9;
   animation: cake-bottom 1s;
+}
+
+.cake-wrap.displayNone {
+  display: none;
 }
 
 
