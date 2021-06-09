@@ -56,18 +56,30 @@ setInterval(blink, 600);
 
 // ==================================== cake motion
 
-function delCake() {
-  let cakeWrap = document.querySelector(".cake-wrap");
-  let cakeChiffons = document.getElementsByClassName('chiffon');
-  let cakeCream = document.getElementById('cream');
+// 5초 후 timeout
+setTimeout(function delCake() {
 
-  cakeWrap.classList.remove("displayNone");
+  // 1. cream, chiffon, cake-bottom 을 유사 배열로 저장 (0~8)
+  let cakeArr = document.querySelectorAll("section#candle, div#cream, div.chiffon, div#cake-bottom, input#next-btn");
+  let i = 0;
 
-}
+  // 배열을 지정한 시간마다 차례로 불러오게 함
+  let runCake = setInterval(function() {
+
+    console.log(cakeArr[i++]);
+
+    if (i == cakeArr.length) {
+      i = 9;
+      clearInterval(runCake);
+    } 
+  }, 500);
 
 
-setInterval(delCake, 1000);
-
+}, 1000);
+  
+ 
+  // const chiffonParent = document.querySelector(".chiffons");
+  // let addremove = chiffonParent.classList.remove("displayNone");
 
 
 
