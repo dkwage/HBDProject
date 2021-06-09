@@ -196,7 +196,7 @@ body::-webkit-scrollbar {
   animation: cake-bottom 1s;
 }
 
-.cake-wrap.displayNone {
+.displayNone {
   display: none;
 }
 
