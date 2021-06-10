@@ -8,19 +8,19 @@
 </head>
 
 <body>
-    <section class="pages">
       <div class="text-wrap">
           <p id="HBD-text" class="lg-text"></p>
       </div>
 
       <article class="cake-wrap">
-        <section id="candle" class="displayNone" onclick="nextPage()">
-          <div class="light"></div>
-          <div class="light"></div>
-          <div class="light"></div>
-          <div class="light"></div>
-          <div class="light"></div>
-          <div id="candle-body"></div>
+        <section id="candle" onclick="nextPage()">
+          <article id="lights" class="displayNone">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+          </article>
+          <div id="candle-body" class="displayNone"></div>
         </section>
 
         
@@ -34,9 +34,8 @@
         </section>
         <div id="cake-bottom" class="displayNone"></div>
 
-        <input type="button" id="next-btn" class="displayNone" value="초를 클릭 하세요.">
+        <h3 id="next-text" class="displayNone">생일 축하해요!</h3>
       </article>  
-    </section>
 
 
   <script src="script/script1.js"></script> 
