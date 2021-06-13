@@ -49,13 +49,13 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: center;
   position: relative;
+  margin-top: 50px;
 }
 
 
 /* ============================================ candle   */
 
 #candle {
-  margin-top: 50px;
   cursor: pointer;
 }
 
@@ -70,18 +70,18 @@ body::-webkit-scrollbar {
 }
 
 .light:nth-child(2) {
-  box-shadow: 0 0 30px 5px rgba(245, 209, 112, 0.3);
+  box-shadow: 0 0 30px 5px rgba(245, 139, 112, 0.6);
   animation: backLight1 1s infinite alternate;  
 }
 
 .light:nth-child(3) {
-  box-shadow: 0 0 30px 15px rgba(236, 223, 152, 0.2);
+  box-shadow: 0 0 30px 15px rgba(255, 209, 157, 0.5);
   animation: backLight2 1s infinite alternate;
 }
 
 .light:nth-child(4) {
   border-radius: 100%;
-  box-shadow:0 0 35px 20px rgba(252, 255, 222, 0.3);
+  box-shadow:0 0 35px 20px rgba(249, 255, 222, 0.3);
   animation: backLight2 0.2s infinite alternate;
 }
 
@@ -179,7 +179,7 @@ body::-webkit-scrollbar {
 .chiffon {
   position: absolute;
   width: 160px; height: 20px;
-  background-color: rgba(236,231,227,1);
+  background-color: rgb(255, 248, 246);
   border-radius: 5px;
   animation-name: chiffon 2s;
 }
