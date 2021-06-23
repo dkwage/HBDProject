@@ -1,4 +1,7 @@
 # HBD project
+
+![image](https://user-images.githubusercontent.com/84275463/123043726-b16c0880-d433-11eb-8581-92808f115ad6.png)
+
 > 🎂   생일 축하 애니메이션 페이지입니다. 차례로 떨어지는 케이크와 촛불로 분위기를 내봤습니다.
 
 --------------
