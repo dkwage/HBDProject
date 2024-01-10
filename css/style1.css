@@ -1,8 +1,14 @@
+@font-face {
+  font-family: 'Date Stamp';
+  src: url(../assets/font/Date\ Stamp\ Alt\ Bold.woff2) format('woff2');
+}
+
 body {
   margin: 0;
   margin: 0 auto;
   padding: 0;
   background-color: rgb(17, 25, 44);
+  font-family: Pretendard;
 }
 
 body::-webkit-scrollbar {
@@ -13,13 +19,18 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-
 /* ===================================== title   */
 
 .text-wrap {
   display: flex;
   justify-content: center;
   margin-top: 180px;
+}
+
+.text-wrap_1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
 }
 
 #HBD-text {
@@ -29,19 +40,20 @@ body::-webkit-scrollbar {
   position: relative;
 }
 
-#HBD-text::after { 
+#HBD-text::after {
   display: block;
   position: absolute;
-  top: 0; right: -10px;
-  width: 3px; height: 100%;
-  content: "";
+  top: 0;
+  right: -10px;
+  width: 3px;
+  height: 100%;
+  content: '';
   background-color: #fff;
 }
 
 #HBD-text.remove::after {
   display: none;
 }
-
 
 /* =========================================================== cake   */
 
@@ -52,7 +64,6 @@ body::-webkit-scrollbar {
   margin-top: 50px;
 }
 
-
 /* ============================================ candle   */
 
 #candle {
@@ -61,8 +72,10 @@ body::-webkit-scrollbar {
 
 .light {
   position: absolute;
-  top: 12%; left: 50%;
-  width: 8px; height: 24px;
+  top: 12%;
+  left: 50%;
+  width: 8px;
+  height: 24px;
   margin-left: -5px;
   background: rgba(255, 213, 99, 0.8);
   border-radius: 100%;
@@ -71,7 +84,7 @@ body::-webkit-scrollbar {
 
 .light:nth-child(2) {
   box-shadow: 0 0 30px 5px rgba(245, 139, 112, 0.6);
-  animation: backLight1 1s infinite alternate;  
+  animation: backLight1 1s infinite alternate;
 }
 
 .light:nth-child(3) {
@@ -81,20 +94,21 @@ body::-webkit-scrollbar {
 
 .light:nth-child(4) {
   border-radius: 100%;
-  box-shadow:0 0 35px 20px rgba(249, 255, 222, 0.3);
+  box-shadow: 0 0 35px 20px rgba(249, 255, 222, 0.3);
   animation: backLight2 0.2s infinite alternate;
 }
 
 #candle-body {
   position: absolute;
-  top: 22%; left: 50%;
+  top: 22%;
+  left: 50%;
   margin-left: -5px;
-  width: 8px; height: 36px;
+  width: 8px;
+  height: 36px;
   border-radius: 2px;
   background-color: rgb(253, 167, 200);
   animation: candleBody 1s alternate;
 }
-
 
 /* ============================================== Candle Animation */
 
@@ -111,9 +125,9 @@ body::-webkit-scrollbar {
 }
 
 @keyframes smCandle {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) scale(1);
-   
   }
   50% {
     transform: translateY(-20px) scale(0);
@@ -121,9 +135,9 @@ body::-webkit-scrollbar {
 }
 
 @keyframes backLight1 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) scale(1);
-   
   }
   50% {
     transform: translateY(0) scale(0);
@@ -131,9 +145,9 @@ body::-webkit-scrollbar {
 }
 
 @keyframes backLight2 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) scale(1);
-   
   }
   50% {
     transform: translateY(0) scale(0.8);
@@ -143,25 +157,27 @@ body::-webkit-scrollbar {
 /* ==================================== chiffons */
 
 .chiffons {
-  width: 160px; height: 300px;
+  width: 160px;
+  height: 300px;
 }
 
 #cream {
   position: absolute;
-  width: 160px; height: 24px;
+  width: 160px;
+  height: 24px;
   top: 33%;
-  background:#fff;
+  background: #fff;
   border-radius: 16px 16px 10px 10px;
   animation: cream 1s;
 }
 
 #cream:after,
 #cream:before {
-  position:absolute;
+  position: absolute;
   width: 12px;
   height: 32px;
-  content: "";
-  background:#fff;
+  content: '';
+  background: #fff;
   border-radius: 100px;
   animation: creams 1s forwards;
 }
@@ -178,7 +194,8 @@ body::-webkit-scrollbar {
 
 .chiffon {
   position: absolute;
-  width: 160px; height: 20px;
+  width: 160px;
+  height: 20px;
   background-color: rgb(255, 248, 246);
   border-radius: 5px;
   animation-name: chiffon 2s;
@@ -220,7 +237,8 @@ body::-webkit-scrollbar {
 #cake-bottom {
   position: absolute;
   top: 66.5%;
-  width: 220px; height: 5px;
+  width: 220px;
+  height: 5px;
   background-color: #a8cce9;
   animation: cake-bottom 0.8s;
 }
@@ -239,7 +257,6 @@ body::-webkit-scrollbar {
   animation: textAnimation 0.06s infinite alternate;
 }
 
-
 /* =========================================== cake animation */
 
 @keyframes textDelay {
@@ -256,7 +273,6 @@ body::-webkit-scrollbar {
     transform: rotate(-2deg);
   }
 }
-
 
 @keyframes cake-bottom {
   0% {
@@ -293,7 +309,10 @@ body::-webkit-scrollbar {
     transform: translateY(-5px) rotate(3deg);
     animation-timing-function: ease-in;
   }
-  25%, 55%, 75%, 87% {
+  25%,
+  55%,
+  75%,
+  87% {
     transform: translateY(5px);
     animation-timing-function: ease-out;
   }
@@ -320,5 +339,60 @@ body::-webkit-scrollbar {
   }
 }
 
+/* =========================================== instax */
 
- 
+#memory-text {
+  display: inline-block;
+  font-size: 1.7em;
+  color: #fff;
+  position: relative;
+  text-align: center;
+  margin-bottom: 10%;
+  font-weight: 400;
+}
+
+#memory-text::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 3px;
+  height: 100%;
+  content: '';
+  background-color: #fff;
+}
+
+#memory-text.remove::after {
+  display: none;
+}
+
+.image_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Declare styles directly to parent */
+instant-picture {
+  height: 50vh;
+  font-size: 1.7rem;
+  font-family: 'Date Stamp';
+}
+
+/* Target type attribute of instant picture */
+instant-picture[type='i-type'] {
+}
+
+/* Target based on if the unstyled attribute is present or not */
+instant-picture[unstyled] {
+}
+instant-picture:not([unstyled]) {
+}
+
+/* Generic targeting of child element representing image */
+instant-picture :not([slot='text']) {
+}
+
+/* Generic targeting of child element representing text */
+instant-picture [slot='text'] {
+  margin-top: 8%;
+}

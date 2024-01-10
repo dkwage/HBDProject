@@ -1,43 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HBD Project</title>
-  <link rel="stylesheet" href="css/style1.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HBD Project</title>
+    <link rel="stylesheet" href="css/style1.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <script type="module" src="./script/instant-picture.unbundled.mjs"></script>
 
-<body>
-      <div class="text-wrap">
-          <p id="HBD-text" class="lg-text"></p>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+
+  <body>
+    <div class="text-wrap">
+      <p id="HBD-text" class="lg-text"></p>
+    </div>
+
+    <article class="cake-wrap">
+      <section id="candle" onclick="nextPage()">
+        <article id="lights" class="displayNone">
+          <div class="light"></div>
+          <div class="light"></div>
+          <div class="light"></div>
+          <div class="light"></div>
+        </article>
+        <div id="candle-body" class="displayNone"></div>
+      </section>
+
+      <section class="chiffons">
+        <div id="cream" class="displayNone"></div>
+        <div class="chiffon displayNone"></div>
+        <div class="chiffon displayNone"></div>
+        <div class="chiffon displayNone"></div>
+        <div class="chiffon displayNone"></div>
+        <div class="chiffon displayNone"></div>
+      </section>
+      <div id="cake-bottom" class="displayNone"></div>
+      <!-- <h3 id="next-text" class="displayNone">생일 축하해요!</h3> -->
+    </article>
+
+    <script>
+      AOS.init();
+    </script>
+    <div class="text-wrap_1">
+      <p id="memory-text" class="lg-text"></p>
+    </div>
+    <article class="memory">
+      <div
+        data-aos="flip-left"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        class="image_container"
+      >
+        <instant-picture type="mini">
+          <img src="/assets/image/IMG_8798.webp" alt="궁합나무" />
+          <p slot="text">01.05.24</p>
+        </instant-picture>
       </div>
-
-      <article class="cake-wrap">
-        <section id="candle" onclick="nextPage()">
-          <article id="lights" class="displayNone">
-            <div class="light"></div>
-            <div class="light"></div>
-            <div class="light"></div>
-            <div class="light"></div>
-          </article>
-          <div id="candle-body" class="displayNone"></div>
-        </section>
-
-        
-        <section class="chiffons">
-          <div id="cream" class="displayNone"></div>
-          <div class="chiffon displayNone"></div>
-          <div class="chiffon displayNone"></div>
-          <div class="chiffon displayNone"></div>
-          <div class="chiffon displayNone"></div>
-          <div class="chiffon displayNone"></div>
-        </section>
-        <div id="cake-bottom" class="displayNone"></div>
-
-        <h3 id="next-text" class="displayNone">생일 축하해요!</h3>
-      </article>  
-
-
-  <script src="script/script1.js"></script> 
-</body>
+    </article>
+  </body>
+  <script src="/script/script.js"></script>
 </html>

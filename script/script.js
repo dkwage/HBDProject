@@ -1,87 +1,88 @@
-// ==================================================== HBD text
+// HBD-text 부분
+let hbdTarget = document.getElementById('HBD-text');
+let hbdStringArr = ['생일 축하해 하늘!!'];
 
-let target = document.getElementById("HBD-text");
-let stringArr = ["황지영님의 생일을 축하합니다.", "지영님의 생일을 축하합니다.",
- "마일비님의 생일을 축하합니다.", "당신의 생일을 축하합니다.", "졍님의 생일을 축하합니다."];
-
-// 배열 크기 미만인 값까지 가져옴
-let selectString = stringArr[Math.floor(Math.random() * stringArr.length)];
-
-// 가지고 온 배열의 문자열을 "" 기준으로 쪼개(split) 다시 배열로 변경
-let selectStringArr = selectString.split(""); 
-
-function randomString() {
-  let stringArr = ["황지영님의 생일을 축하합니다.", "지영님의 생일을 축하합니다.",
- "마일비님의 생일을 축하합니다.", "당신의 생일을 축하합니다.", "졍님의 생일을 축하합니다."];
-  let selectString = stringArr[Math.floor(Math.random() * stringArr.length)];
-  let selectStringArr = selectString.split("");  
-
-  return selectStringArr;
+function randomHbdString() {
+  return hbdStringArr[0].split('');
 }
 
-// reset typing
-function restetTyping() {
-  target.textContent = "";
-  hbdText(randomString());
+function resetHbdTyping() {
+  hbdTarget.textContent = '';
+  hbdText(randomHbdString());
 }
 
-// 한글자씩 텍스트 출력 함수
-//배열화 되어있는 값이 매개변수로 전달됨
 function hbdText(randomArr) {
+  if (randomArr.length > 0) {
+    hbdTarget.textContent += randomArr.shift();
 
-// 배열 길이 값이 0이 될 때까지 실행
-  if(randomArr.length > 0){
-
-    //shift : 배열이 있다면 앞의 값부터 빼냄, textContent로 빠진 값을 출력
-    target.textContent += randomArr.shift();
-
-    //모든 문자열이 출력될 때까지 반복
-    setTimeout(function(){
+    setTimeout(function () {
       hbdText(randomArr);
     }, 150);
-  }else { // 남아있는게 없을 때
-    setTimeout(restetTyping, 2000);
   }
 }
 
-//호출 시 랜덤 배열을 매개변수로 받음
-hbdText(randomString());
+hbdText(randomHbdString());
 
-// 커서 깜박임 효과
 function blink() {
-  target.classList.toggle("remove");
+  hbdTarget.classList.toggle('remove');
 }
 setInterval(blink, 600);
 
+// memory-text 부분
+let memoryTarget = document.getElementById('memory-text');
+let memoryStringArr = ['우리가 함께한 시간들'];
+
+function randomMemoryString() {
+  return memoryStringArr[0].split('');
+}
+
+function resetMemoryTyping() {
+  memoryTarget.textContent = '';
+  // blink(); // 추가: 커서 깜빡임 효과를 시작하기 위해 blink 함수 호출
+  memoryText(randomMemoryString());
+}
+
+function memoryText(randomArr) {
+  if (randomArr.length > 0) {
+    memoryTarget.textContent += randomArr.shift();
+
+    setTimeout(function () {
+      memoryText(randomArr);
+    }, 150);
+  }
+}
 
 // ==================================== cake motion
 
 // 5초 후 timeout
 setTimeout(function delCake() {
-
-  // 배열 저장
-  let cakeArr = Array.from(document.querySelectorAll("article#lights, div#candle-body, div#cream, div.chiffon, div#cake-bottom, h3#next-text"));
+  let cakeArr = Array.from(
+    document.querySelectorAll(
+      'article#lights, div#candle-body, div#cream, div.chiffon, div#cake-bottom, h3#next-text'
+    )
+  );
   cakeArr = cakeArr.reverse();
   let i = 0;
 
-  // 배열을 지정한 시간마다 차례로 불러오게 함
-  let runCake = setInterval(function() {
-
-    cakeArr[i].classList.remove("displayNone");
+  let runCake = setInterval(function () {
+    cakeArr[i].classList.remove('displayNone');
     i++;
 
     if (i == cakeArr.length) {
-      i = 11;
       clearInterval(runCake);
-    } 
+
+      // 'cake motion'이 완료된 후 'memory text' 시작
+      setTimeout(function () {
+        resetMemoryTyping();
+      }, 1000); // 1000은 'cake motion' 애니메이션의 지속 시간을 대략적으로 고려한 값
+    }
   }, 1000);
-
 }, 2000);
-
-
 
 // ============================== next button
 
 function nextPage() {
-  let nextButton = document.getElementById("candle");
+  let nextButton = document.getElementById('candle');
 }
+
+// ==================================================== memory text
