@@ -38,8 +38,11 @@ function randomMemoryString() {
 
 function resetMemoryTyping() {
   memoryTarget.textContent = '';
-  // blink(); // 추가: 커서 깜빡임 효과를 시작하기 위해 blink 함수 호출
   memoryText(randomMemoryString());
+  function blink() {
+    memoryTarget.classList.toggle('remove');
+  }
+  setInterval(blink, 600);
 }
 
 function memoryText(randomArr) {
