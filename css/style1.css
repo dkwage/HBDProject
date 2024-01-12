@@ -30,7 +30,7 @@ body::-webkit-scrollbar {
 .text-wrap_1 {
   display: flex;
   justify-content: center;
-  margin-top: 30%;
+  margin-top: 5%;
 }
 
 #HBD-text {
@@ -377,6 +377,10 @@ instant-picture {
   height: 50vh;
   font-size: 1.7rem;
   font-family: 'Date Stamp';
+}
+
+[slot='text'] {
+  color: #191919;
 }
 
 /* Target type attribute of instant picture */
