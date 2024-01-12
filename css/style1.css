@@ -30,7 +30,7 @@ body::-webkit-scrollbar {
 .text-wrap_1 {
   display: flex;
   justify-content: center;
-  margin-top: 10%;
+  margin-top: 30%;
 }
 
 #HBD-text {
@@ -370,6 +370,7 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10%;
 }
 /* Declare styles directly to parent */
 instant-picture {
